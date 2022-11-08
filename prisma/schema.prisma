@@ -9,3 +9,12 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model product{
+  id Int @id @default(autoincrement())
+  slug String
+  description String  @db.VarChar(50)
+  inventery String  @db.VarChar(50)
+  price Decimal
+  
+}
