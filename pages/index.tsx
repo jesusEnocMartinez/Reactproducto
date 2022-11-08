@@ -132,6 +132,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       slug: true,
       id: true,
       description: true
+      
     }
   })
 
