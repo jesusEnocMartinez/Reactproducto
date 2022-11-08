@@ -83,7 +83,7 @@ import styles from '../styles/Home.module.css'
     
   return (
     <div >
-       <h1 className="text-center font-bold text-2xl mt-4">Notes</h1>
+       <h1 className="text-center font-bold text-2xl mt-4">Product</h1>
       <form onSubmit={e => {
         e.preventDefault()
         handleSubmit(form)
@@ -100,7 +100,7 @@ import styles from '../styles/Home.module.css'
           onChange={e => setForm({...form, description: e.target.value})}
           className="border-2 rounded border-gray-600 p-1"
         />
-        <button type="submit" className="bg-blue-500 text-white rounded p-1">Add +</button>
+        <button type="submit" className="bg-blue-500 text-white rounded p-1">Add </button>
       </form>
       <div className="w-auto min-w-[25%] max-w-min mt-20 mx-auto space-y-6 flex flex-col items-stretch">
         <ul>
@@ -112,7 +112,7 @@ import styles from '../styles/Home.module.css'
                   <p className="text-sm">{product.description}</p>
                 </div>
                 <button onClick={() => setForm({slug: product.slug, description: product.description, inventery: product.inventery, price: product.price, id: product.id})} className="bg-blue-500 mr-3 px-3 text-white rounded">Update</button>
-                <button onClick={() => deleteProduct(product.id)} className="bg-red-500 px-3 text-white rounded">X</button>
+                <button onClick={() => deleteProduct(product.id)} className="bg-red-500 px-3 text-white rounded">Delete</button>
               </div>
             </li>
           ))}
