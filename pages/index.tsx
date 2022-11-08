@@ -90,18 +90,30 @@ import { prisma } from '../lib/prisma'
         handleSubmit(form)
       }} className='w-auto min-w-[25%] max-w-min mx-auto space-y-6 flex flex-col items-stretch'>
         <input type="text"
-          placeholder="Title"
+          placeholder="Name"
           value={form.slug}
           onChange={e => setForm({...form, slug: e.target.value})}
           className="border-2 rounded border-gray-600 p-1"
         />
         <textarea 
-          placeholder="Content"
+          placeholder="Description"
           value={form.description}
           onChange={e => setForm({...form, description: e.target.value})}
           className="border-2 rounded border-gray-600 p-1"
         />
-        <button type="submit" className="bg-blue-500 text-white rounded p-1">Add </button>
+         <input type="text"
+          placeholder="inventery"
+          value={form.slug}
+          onChange={e => setForm({...form, slug: e.target.value})}
+          className="border-2 rounded border-gray-600 p-1"
+        />
+         <input type="text"
+          placeholder="Price"
+          value={form.slug}
+          onChange={e => setForm({...form, slug: e.target.value})}
+          className="border-2 rounded border-gray-600 p-1"
+        />
+        <button type="submit" className="bg-blue-500 text-white rounded p-1">Add product </button>
       </form>
       <div className="w-auto min-w-[25%] max-w-min mt-20 mx-auto space-y-6 flex flex-col items-stretch">
         <ul>
