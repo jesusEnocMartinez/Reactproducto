@@ -2,14 +2,14 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "../../../lib/prisma";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse){
-	const noteId = req.query.id
+	const productId = req.query.id
 
 	if(req.method === 'DELETE') {
-		const note = await prisma.product.delete({
-			where: {id: Number(noteId)}
+		const Product = await prisma.product.delete({
+			where: {id: Number(productId)}
 		})
-		res.json(note)
+		res.json(Product)
 	} else {
-		console.log("Note could not be created");
+		console.log("Product could not be created");
 	}
 }
