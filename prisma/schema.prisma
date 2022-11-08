@@ -10,11 +10,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model product{
-  id Int @id @default(autoincrement())
-  slug String
+model Product {
+  id          Int     @id @default(autoincrement())
+  slug        String
   description String  @db.VarChar(50)
-  inventery String  @db.VarChar(50)
-  price Decimal
-  
+  inventery   String  @db.VarChar(50)
+  price       Decimal
 }
