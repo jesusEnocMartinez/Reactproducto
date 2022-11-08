@@ -3,7 +3,7 @@ import { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { prisma } from '../lib/prisma'
-import styles from '../styles/Home.module.css'
+
 
   
   interface Product{
@@ -82,6 +82,7 @@ import styles from '../styles/Home.module.css'
     }
     
   return (
+    
     <div >
        <h1 className="text-center font-bold text-2xl mt-4">Product</h1>
       <form onSubmit={e => {
