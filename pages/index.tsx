@@ -60,7 +60,7 @@ import { prisma } from '../lib/prisma'
   
     async function deleteProduct(id: string) {
       try {
-       fetch(`http://localhost:3000/api/note/${id}`, {
+       fetch(`http://localhost:3000/api/product/${id}`, {
          headers: {
            "Content-Type": "application/json",
          },
@@ -139,14 +139,14 @@ import { prisma } from '../lib/prisma'
         />
          <input type="text"
           placeholder="inventery"
-          value={form.slug}
-          onChange={e => setForm({...form, slug: e.target.value})}
+          value={form.inventery}
+          onChange={e => setForm({...form, inventery: e.target.value})}
           className="border-2 rounded border-gray-600 p-1"
         />
          <input type="text"
           placeholder="Price"
-          value={form.slug}
-          onChange={e => setForm({...form, slug: e.target.value})}
+          value={form.price}
+          onChange={e => setForm({...form, price: e.target.value})}
           className="border-2 rounded border-gray-600 p-1"
         />
         <button type="submit" className="bg-sky-700  text-white rounded p-1">Add product </button>
@@ -159,6 +159,8 @@ import { prisma } from '../lib/prisma'
                 <div className="flex-1">
                   <h3 className="font-bold">{product.slug}</h3>
                   <p className="text-sm">{product.description}</p>
+                  <p className="text-sm">{product.inventery}</p>
+                  <p className="text-sm">{product.price}</p>
                 </div>
                 <button onClick={() => setForm({slug: product.slug, description: product.description, inventery: product.inventery, price: product.price, id: product.id})} className="bg-blue-500 mr-3 px-3 text-white rounded">Update</button>
                 <button onClick={() => deleteProduct(product.id)} className="bg-red-500 px-3 text-white rounded">Delete</button>
