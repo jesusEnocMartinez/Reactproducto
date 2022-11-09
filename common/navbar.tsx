@@ -39,3 +39,4 @@ export const navbar: React.FC<{}> = () =>{
         </div>
     )
 }
+export default navbar
