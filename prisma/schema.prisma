@@ -15,5 +15,5 @@ model Product {
   slug        String
   description String  
   inventery   String  
-  price       Decimal
+  price       String
 }
